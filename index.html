@@ -1,678 +1,201 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <title>第四届深圳国际安全健康测试技术学术会议暨2026湾区科学仪器与实验室科技产业合作促进活动</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', 'Roboto', 'Noto Sans', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background-color: #f5f9ff;
-            color: #1a2c3e;
-            line-height: 1.5;
-        }
-        .page-wrapper {
-            background: linear-gradient(135deg, #f8fafc 0%, #eef2f9 100%);
-            transition: background-image 0.3s ease;
-        }
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .top-banner-img {
-            width: 100%;
-            margin: 20px 0 0 0;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            background: #fff;
-        }
-        .top-banner-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-        }
-        .hero {
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(2px);
-            border-radius: 0 0 2rem 2rem;
-            margin-top: 20px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(66,153,225,0.2);
-        }
-        .hero-badge {
-            background: #1e4a76;
-            color: white;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        .hero h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #0b3b5f, #2c7da0);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 0.5rem;
-        }
-        @media (min-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-        }
-        .subtitle {
-            font-size: 1rem;
-            color: #2c5282;
-            font-weight: 500;
-            border-left: 4px solid #3182ce;
-            padding-left: 1rem;
-            margin: 0.5rem 0;
-        }
-        .info-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #eef2ff;
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-        }
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.7rem 1.5rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-            border: none;
-        }
-        .btn-primary {
-            background: #2b6cb0;
-            color: white;
-            box-shadow: 0 4px 8px rgba(43,108,176,0.3);
-        }
-        .btn-primary:hover { background: #1e4a76; transform: translateY(-2px); }
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid #2b6cb0;
-            color: #2b6cb0;
-        }
-        .btn-outline:hover { background: #e6f0ff; }
-        .welcome-section {
-            background: white;
-            border-radius: 2rem;
-            padding: 1.5rem 1.8rem;
-            margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            border-left: 6px solid #3182ce;
-        }
-        .welcome-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            color: #0f3b5c;
-        }
-        .welcome-section p {
-            color: #2d3e50;
-            line-height: 1.6;
-        }
-        .carousel-wrapper {
-            background: #fff;
-            border-radius: 2rem;
-            margin: 1.5rem 0 2rem;
-            padding: 1rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-        .carousel-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e4a76;
-            margin-bottom: 1rem;
-            padding-left: 0.5rem;
-        }
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            background: #f0f4fa;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.4s ease;
-            will-change: transform;
-        }
-        .carousel-slide {
-            flex: 0 0 100%;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #eef2ff;
-        }
-        .carousel-slide img, .carousel-slide video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-        }
-        .carousel-btn.left { left: 12px; }
-        .carousel-btn.right { right: 12px; }
-        .carousel-btn:hover { background: rgba(0,0,0,0.7); }
-        .dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 12px;
-        }
-        .dot {
-            width: 8px;
-            height: 8px;
-            background: #cbd5e0;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .dot.active {
-            background: #2b6cb0;
-            width: 24px;
-            border-radius: 12px;
-        }
-        @media (max-width: 640px) {
-            .carousel-btn { width: 32px; height: 32px; font-size: 1.2rem; }
-        }
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0 3rem;
-        }
-        @media (max-width: 640px) {
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
-        @media (max-width: 480px) {
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        .card {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(2px);
-            border-radius: 1.2rem;
-            padding: 1.2rem 0.8rem;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
-            border: 1px solid rgba(100,150,200,0.2);
-            transition: all 0.2s;
-        }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
-        .card-icon { font-size: 2rem; color: #2b6cb0; margin-bottom: 0.5rem; }
-        .card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; color: #1e3a5f; }
-        .card p { font-size: 0.75rem; color: #4a627a; }
-        .footer {
-            background: #0f2b3b;
-            color: #cbd5e0;
-            margin-top: 0rem;
-            padding: 1.8rem 1rem;
-            text-align: center;
-            border-radius: 2rem 2rem 0 0;
-            font-size: 0.8rem;
-        }
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.2s;
-        }
-        .modal-overlay.active { visibility: visible; opacity: 1; }
-        .modal-container {
-            background: white;
-            width: 90%;
-            max-width: 1000px;
-            max-height: 85vh;
-            border-radius: 2rem;
-            overflow-y: auto;
-            padding: 1.5rem;
-            position: relative;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.2);
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 0.7rem;
-            margin-bottom: 1rem;
-        }
-        .modal-header h3 { font-size: 1.3rem; color: #0f3b5c; }
-        .close-modal {
-            font-size: 1.8rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #718096;
-        }
-        .modal-body img { max-width: 100%; height: auto; border-radius: 1rem; }
-        .modal-body p, .modal-body div { line-height: 1.5; }
-        .session-tabs {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 0.5rem;
-            padding: 0.5rem 0 1rem 0;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #e2e8f0;
-            -webkit-overflow-scrolling: touch;
-        }
-        .tab-btn {
-            background: #f1f5f9;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.85rem;
-            white-space: nowrap;
-            cursor: pointer;
-            transition: 0.2s;
-            color: #2d3748;
-        }
-        .tab-btn.active {
-            background: #2b6cb0;
-            color: white;
-        }
-        .session-content { display: none; }
-        .session-content.active { display: block; }
-        .session-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-        }
-        .session-table th, .session-table td {
-            border: 1px solid #cbd5e0;
-            padding: 8px 8px;
-            vertical-align: top;
-            text-align: left;
-        }
-        .session-table th {
-            background: #eef2ff;
-            font-weight: 600;
-        }
-        .session-table .section-header {
-            background: #d9e6f5;
-            font-weight: bold;
-        }
-        @media (max-width: 640px) {
-            .session-table { font-size: 0.75rem; }
-            .session-table th, .session-table td { padding: 6px 4px; }
-            .tab-btn { padding: 0.4rem 0.8rem; font-size: 0.75rem; }
-        }
-    </style>
-</head>
-<body>
-<div class="page-wrapper" id="app">
-    <div class="container">
-        <div class="top-banner-img">
-            <img src="第四届深圳国际安全健康测试技术学术会议20260513.png" alt="会议主视觉" onerror="this.src='https://placehold.co/1200x400?text=Conference+Banner'">
-        </div>
-        <div id="heroContainer"></div>
-        <div id="welcomeContainer"></div>
-        <div id="cardsContainer"></div>
-        <div id="carouselSection"></div>
-    </div>
-    <div id="footerContainer"></div>
-</div>
-<div id="globalModal" class="modal-overlay">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 id="modalTitle">标题</h3>
-            <button class="close-modal" id="closeModalBtn">&times;</button>
-        </div>
-        <div class="modal-body" id="modalContent">加载中...</div>
-    </div>
-</div>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,user-scalable=yes"><title>第四届深圳国际安全健康测试技术学术会议</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI','Roboto','Noto Sans',system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background-color:#f5f9ff;color:#1a2c3e;line-height:1.5}.page-wrapper{background:linear-gradient(135deg,#f8fafc 0%,#eef2f9 100%);transition:background-image .3s ease}.container{max-width:1280px;margin:0 auto;padding:0 24px}.top-banner-img{width:100%;margin:20px 0 0;border-radius:1.5rem;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.1);background:#fff}.top-banner-img img{width:100%;height:auto;display:block;object-fit:contain}.hero{background:rgba(255,255,255,0.92);backdrop-filter:blur(2px);border-radius:0 0 2rem 2rem;margin-top:20px;padding:1.8rem 2rem;box-shadow:0 12px 30px rgba(0,0,0,0.05);border:1px solid rgba(66,153,225,0.2)}.hero-badge{background:#1e4a76;color:#fff;display:inline-block;padding:.3rem 1rem;border-radius:40px;font-size:.85rem;font-weight:500;margin-bottom:1rem}.hero h1{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,#0b3b5f,#2c7da0);background-clip:text;-webkit-background-clip:text;color:transparent;margin-bottom:.5rem}@media(min-width:768px){.hero h1{font-size:2rem}}.subtitle{font-size:1rem;color:#2c5282;font-weight:500;border-left:4px solid #3182ce;padding-left:1rem;margin:.5rem 0}.info-row{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0}.info-item{display:flex;align-items:center;gap:8px;background:#eef2ff;padding:.3rem 1rem;border-radius:50px;font-size:.9rem}.btn-group{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}.btn{display:inline-flex;align-items:center;gap:8px;padding:.7rem 1.5rem;border-radius:40px;font-weight:600;font-size:.95rem;cursor:pointer;transition:.2s;text-decoration:none;border:none}.btn-primary{background:#2b6cb0;color:#fff;box-shadow:0 4px 8px rgba(43,108,176,0.3)}.btn-primary:hover{background:#1e4a76;transform:translateY(-2px)}.btn-outline{background:transparent;border:1.5px solid #2b6cb0;color:#2b6cb0}.btn-outline:hover{background:#e6f0ff}.welcome-section{background:#fff;border-radius:2rem;padding:1.5rem 1.8rem;margin:2rem 0;box-shadow:0 5px 15px rgba(0,0,0,0.03);border-left:6px solid #3182ce}.welcome-section h3{font-size:1.4rem;margin-bottom:.75rem;color:#0f3b5c}.welcome-section p{color:#2d3e50;line-height:1.6}.carousel-wrapper{background:#fff;border-radius:2rem;margin:1.5rem 0 2rem;padding:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.05)}.carousel-title{display:flex;align-items:center;gap:8px;font-size:1.2rem;font-weight:600;color:#1e4a76;margin-bottom:1rem;padding-left:.5rem}.carousel-container{position:relative;overflow:hidden;border-radius:1.5rem;background:#f0f4fa}.carousel-track{display:flex;transition:transform .4s ease;will-change:transform}.carousel-slide{flex:0 0 100%;width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:#eef2ff}.carousel-slide img,.carousel-slide video{width:100%;height:100%;object-fit:cover;display:block}.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1.5rem;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:.2s}.carousel-btn.left{left:12px}.carousel-btn.right{right:12px}.carousel-btn:hover{background:rgba(0,0,0,0.7)}.dots{display:flex;justify-content:center;gap:10px;margin-top:12px}.dot{width:8px;height:8px;background:#cbd5e0;border-radius:50%;cursor:pointer;transition:.2s}.dot.active{background:#2b6cb0;width:24px;border-radius:12px}@media(max-width:640px){.carousel-btn{width:32px;height:32px;font-size:1.2rem}}.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin:2rem 0 3rem}@media(max-width:640px){.cards-grid{grid-template-columns:repeat(2,1fr);gap:1rem}}@media(max-width:480px){.cards-grid{grid-template-columns:repeat(2,1fr)}}.card{background:rgba(255,255,255,0.95);backdrop-filter:blur(2px);border-radius:1.2rem;padding:1.2rem .8rem;text-align:center;cursor:pointer;box-shadow:0 5px 12px rgba(0,0,0,0.05);border:1px solid rgba(100,150,200,0.2);transition:all .2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 20px rgba(0,0,0,0.1)}.card-icon{font-size:2rem;color:#2b6cb0;margin-bottom:.5rem}.card h4{font-size:1rem;font-weight:600;margin-bottom:.3rem;color:#1e3a5f}.card p{font-size:.75rem;color:#4a627a}.footer{background:#0f2b3b;color:#cbd5e0;margin-top:0;padding:1.8rem 1rem;text-align:center;border-radius:2rem 2rem 0 0;font-size:.8rem}.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:.2s}.modal-overlay.active{visibility:visible;opacity:1}.modal-container{background:#fff;width:90%;max-width:1000px;max-height:85vh;border-radius:2rem;overflow-y:auto;padding:1.5rem;position:relative;box-shadow:0 20px 35px rgba(0,0,0,0.2)}.modal-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0;padding-bottom:.7rem;margin-bottom:1rem}.modal-header h3{font-size:1.3rem;color:#0f3b5c}.close-modal{font-size:1.8rem;cursor:pointer;background:0 0;border:none;color:#718096}.modal-body img{max-width:100%;height:auto;border-radius:1rem}.modal-body p,.modal-body div{line-height:1.5}.session-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:.5rem;padding:.5rem 0 1rem;margin-bottom:1rem;border-bottom:1px solid #e2e8f0;-webkit-overflow-scrolling:touch}.tab-btn{background:#f1f5f9;border:none;padding:.5rem 1rem;border-radius:2rem;font-size:.85rem;white-space:nowrap;cursor:pointer;transition:.2s;color:#2d3748}.tab-btn.active{background:#2b6cb0;color:#fff}.session-content{display:none}.session-content.active{display:block}.session-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.5rem}.session-table th,.session-table td{border:1px solid #cbd5e0;padding:8px;vertical-align:top;text-align:left}.session-table th{background:#eef2ff;font-weight:600}.session-table .section-header{background:#d9e6f5;font-weight:700}@media(max-width:640px){.session-table{font-size:.75rem}.session-table th,.session-table td{padding:6px 4px}.tab-btn{padding:.4rem .8rem;font-size:.75rem}}</style></head>
+<body><div class="page-wrapper" id="app"><div class="container"><div class="top-banner-img"><img src="第四届深圳国际安全健康测试技术学术会议20260513.png" alt="会议主视觉" onerror="this.src='https://placehold.co/1200x400?text=Conference+Banner'"></div><div id="heroContainer"></div><div id="welcomeContainer"></div><div id="cardsContainer"></div><div id="carouselSection"></div></div><div id="footerContainer"></div><div id="loadStatus" style="position:fixed;bottom:20px;left:20px;background:#ff6b6b;color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;display:none;z-index:999;"></div></div><div id="globalModal" class="modal-overlay"><div class="modal-container"><div class="modal-header"><h3 id="modalTitle">标题</h3><button class="close-modal" id="closeModalBtn">&times;</button></div><div class="modal-body" id="modalContent">加载中...</div></div></div>
 <script>
-    // 全局配置
-    let CONF = {};
-    let SESSIONS = [];
+// ========== 路径自动适配 ==========
+function getBasePath(){let p=window.location.pathname;if(p.endsWith('/'))p=p.slice(0,-1);const idx=p.lastIndexOf('/');if(idx>0)return p.slice(0,idx+1);return '/';}
+const BASE=getBasePath();
 
-    // 模块卡片定义
-    const MODULES = [
-        { id: "confInfo", title: "会议信息", icon: "fas fa-info-circle", type: "modal", contentKey: "conferenceIntro" },
-        { id: "org", title: "组织架构", icon: "fas fa-building", type: "modal", contentKey: "organization" },
-        { id: "experts", title: "参会专家", icon: "fas fa-users", type: "modal", contentKey: "expertsList" },
-        { id: "briefSchedule", title: "简要日程", icon: "fas fa-calendar-week", type: "modal", contentKey: "briefSchedule" },
-        { id: "detailSchedule", title: "详细日程", icon: "fas fa-table-list", type: "modal", contentKey: "sessions" },
-        { id: "register", title: "参会报名", icon: "fas fa-user-plus", type: "link", urlKey: "registrationUrl", desc: "填写问卷星报名" },
-        { id: "regNotice", title: "注册须知", icon: "fas fa-clipboard-list", type: "modal", contentKey: "registrationNotice" },
-        { id: "callPaper", title: "报名演讲", icon: "fas fa-file-alt", type: "modal", contentKey: "callForPapers" },
-        { id: "subGuide", title: "报名须知", icon: "fas fa-pen-ruler", type: "modal", contentKey: "submissionGuidelines" },
-        { id: "photoLive", title: "照片直播", icon: "fas fa-camera", type: "link", urlKey: "photoLiveUrl", desc: "查看精彩瞬间" },
-        { id: "support", title: "会议支持", icon: "fas fa-handshake", type: "modal", contentKey: "conferenceSupport" },
-        { id: "pastConferences", title: "精彩瞬间", icon: "fas fa-calendar-alt", type: "modal", contentKey: "pastConferences" }
-    ];
+// ========== 全局变量 ==========
+let CONF={}, SESSIONS=[];
 
-    // 加载配置文件
-    async function loadConfig() {
-        try {
-            const res = await fetch('config.json');
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            CONF = await res.json();
-        } catch (e) {
-            console.warn('加载 config.json 失败，使用内嵌默认值', e);
-            CONF = {
-                year: "2026",
-                fullTitle: "第四届深圳国际安全健康测试技术学术会议",
-                shortTitle: "FXCS2026",
-                dates: "2026年5月15-16日",
-                location: "中国 · 广东 深圳",
-                backgroundImage: "",
-                welcomeMessage: "敬爱的各位专家、同仁：<br>热烈欢迎参加第四届深圳国际安全健康测试技术学术会议暨2026湾区科学仪器与实验室科技产业合作促进活动！本次大会汇聚顶尖智慧，共促测试技术与科学仪器产业创新，期待与您相聚鹏城。",
-                registrationUrl: "#",  // 示例问卷星链接，可更换
-                photoLiveUrl: "#",  // 示例图片共享文件夹链接
-                autoPlayIntervalMs: 15000,  // 示例往年图片视频轮换时间，默认15000毫秒
-                carouselSlides: [],
-                conferenceIntro: "会议简介",
-                organization: { guidance: "深圳市科协", host: "深圳市分析测试协会", organizers: "深圳市分析测试协会秘书处", organizations: "", sponsor: "" },
-                expertsList: [],
-                briefSchedule: "日程即将发布",
-                registrationNotice: "注册须知",
-                callForPapers: "演讲报名",
-                submissionGuidelines: "报名须知",
-                conferenceSupport: "鸣谢单位",
-                pastConferences: []
-            };
+// ========== 加载配置 ==========
+async function loadConfig(){
+    const status=document.getElementById('loadStatus');
+    try{
+        let configRes=null;
+        for(let p of [`config.json?v=${Date.now()}`,`${BASE}config.json?v=${Date.now()}`,`./config.json?v=${Date.now()}`]){
+            try{const r=await fetch(p);if(r.ok){configRes=r;break;}}catch(e){}
         }
-        try {
-            const res = await fetch('sessions.json');
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            SESSIONS = await res.json();
-        } catch (e) {
-            console.warn('加载 sessions.json 失败，使用空数组', e);
-            SESSIONS = [];
-        }
-    }
+        if(!configRes)throw new Error('config.json 未找到');
+        CONF=await configRes.json();
 
-    // 根据 contentKey 生成模态内容
-    function getModalContent(key) {
-        if (key === "sessions") {
-            if (!SESSIONS.length) return "<p>日程数据加载中...</p>";
-            let tabsHtml = `<div class="session-tabs" id="sessionTabs">`;
-            let contentsHtml = `<div id="sessionContents">`;
-            SESSIONS.forEach((session, idx) => {
-                const activeClass = idx === 0 ? 'active' : '';
-                let displayName = session.name.length > 20 ? session.name.substring(0,18)+'…' : session.name;
-                tabsHtml += `<button class="tab-btn ${activeClass}" data-session="${idx}">${displayName}</button>`;
-                contentsHtml += `<div class="session-content ${activeClass}" data-session="${idx}">
-                                    <div style="margin-bottom:12px;"><strong>${session.timePlace}</strong></div>
-                                    ${session.tableHtml}
-                                  </div>`;
-            });
-            tabsHtml += `</div>`;
-            contentsHtml += `</div>`;
-            setTimeout(() => {
-                const tabs = document.querySelectorAll('#sessionTabs .tab-btn');
-                const contents = document.querySelectorAll('#sessionContents .session-content');
-                tabs.forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        const idx = tab.getAttribute('data-session');
-                        tabs.forEach(t => t.classList.remove('active'));
-                        tab.classList.add('active');
-                        contents.forEach(c => c.classList.remove('active'));
-                        document.querySelector(`.session-content[data-session="${idx}"]`).classList.add('active');
-                    });
-                });
-            }, 50);
-            return tabsHtml + contentsHtml;
+        let sessionsRes=null;
+        for(let p of [`sessions.json?v=${Date.now()}`,`${BASE}sessions.json?v=${Date.now()}`,`./sessions.json?v=${Date.now()}`]){
+            try{const r=await fetch(p);if(r.ok){sessionsRes=r;break;}}catch(e){}
         }
-        if (key === "pastConferences") {
-            if (!CONF.pastConferences || CONF.pastConferences.length === 0) return "<p>暂无往年会议信息</p>";
-            let list = '<ul style="margin-left:1.2rem; line-height:1.8;">';
-            CONF.pastConferences.forEach(item => {
-                list += `<li><strong>${item.year}</strong>：<a href="${item.url}" target="_blank">${item.url}</a></li>`;
-            });
-            list += '</ul>';
-            return list;
-        }
-        if (key === "organization") {
-            const org = CONF.organization;
-            return `<div><strong>指导单位：</strong>${org.guidance}</div><br>
-                    <div><strong>主办单位：</strong>${org.host}</div><br>
-                    <div><strong>承办单位：</strong>${org.organizers}</div><br>
-                    <div><strong>组织单位：</strong>${org.organizations}</div><br>
-                    <div><strong>主赞助单位：</strong>${org.sponsor}</div>`;
-        }
-        if (key === "expertsList") {
-            if (!CONF.expertsList || CONF.expertsList.length === 0) return "<p>专家信息更新中</p>";
-            let html = '<div style="display:grid;gap:12px;">';
-            CONF.expertsList.forEach(exp => {
-                html += `<div style="background:#f1f5f9;padding:10px;border-radius:12px;"><strong>${exp.name}</strong><br>${exp.title}<br><span style="font-size:0.8rem;">${exp.field}</span></div>`;
-            });
-            html += '</div>';
-            return html;
-        }
-        return `<p>${CONF[key] || "信息更新中"}</p>`;
-    }
-
-    // 渲染各部分
-    function renderHero() {
-        document.getElementById('heroContainer').innerHTML = `
-            <div class="hero">
-                <div class="hero-badge">${CONF.shortTitle}</div>
-                <h1>${CONF.fullTitle}</h1>
-                <div class="subtitle">2026湾区科学仪器与实验室科技产业合作促进活动</div>
-                <div class="info-row">
-                    <div class="info-item"><i class="far fa-calendar-alt"></i> ${CONF.dates}</div>
-                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> ${CONF.location}</div>
-                </div>
-                <div class="btn-group">
-                    <a class="btn btn-primary" id="heroRegBtn"><i class="fas fa-clipboard-list"></i> 参会报名</a>
-                    <a class="btn btn-outline" id="heroPaperBtn"><i class="fas fa-file-signature"></i> 演讲报名</a>
-                </div>
-            </div>
-        `;
-        document.getElementById('heroRegBtn')?.addEventListener('click', () => window.open(CONF.registrationUrl, '_blank'));
-        document.getElementById('heroPaperBtn')?.addEventListener('click', () => showModalByKey("callForPapers"));
-    }
-
-    function renderWelcome() {
-        document.getElementById('welcomeContainer').innerHTML = `
-            <div class="welcome-section">
-                <h3><i class="fas fa-microphone-alt"></i> 欢迎辞</h3>
-                <p>${CONF.welcomeMessage}</p>
-                <div style="margin-top:12px;font-size:0.9rem;color:#2c5282;">—— 深圳市分析测试协会 杨国武 执行会长</div>
-            </div>
-        `;
-    }
-
-    let carouselIndex = 0, track, slides, totalSlides, autoPlayTimer;
-    function startAutoPlay() { if (autoPlayTimer) clearInterval(autoPlayTimer); if (totalSlides <= 1) return; autoPlayTimer = setInterval(() => changeSlide(1), CONF.autoPlayIntervalMs || 15000); }
-    function resetAutoPlay() { if (autoPlayTimer) { clearInterval(autoPlayTimer); startAutoPlay(); } }
-    function buildCarousel() {
-        const container = document.getElementById('carouselSection');
-        const slidesData = CONF.carouselSlides || [];
-        if (slidesData.length === 0) { container.innerHTML = '<div class="carousel-wrapper"><div class="carousel-title">往届精彩瞬间</div><div style="padding:2rem;">即将更新</div></div>'; return; }
-        let slidesHtml = '';
-        slidesData.forEach((item, idx) => {
-            if (item.type === 'video') slidesHtml += `<div class="carousel-slide"><video controls preload="metadata" src="${item.src}"></video></div>`;
-            else slidesHtml += `<div class="carousel-slide"><img src="${item.src}" alt="slide ${idx}" loading="lazy"></div>`;
-        });
-        const carouselHtml = `
-            <div class="carousel-wrapper">
-                <div class="carousel-title"><i class="fas fa-images"></i> 往届精彩影像集锦（自动播放）</div>
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carouselTrack">${slidesHtml}</div>
-                    <button class="carousel-btn left" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-btn right" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
-                </div>
-                <div class="dots" id="carouselDots"></div>
-            </div>
-        `;
-        container.innerHTML = carouselHtml;
-        track = document.getElementById('carouselTrack');
-        slides = document.querySelectorAll('.carousel-slide');
-        totalSlides = slides.length;
-        updateCarousel();
-        document.getElementById('carouselPrev')?.addEventListener('click', () => { changeSlide(-1); resetAutoPlay(); });
-        document.getElementById('carouselNext')?.addEventListener('click', () => { changeSlide(1); resetAutoPlay(); });
-        renderDots();
-        let startX = 0;
-        track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-        track.addEventListener('touchend', e => {
-            if (!startX) return;
-            const diff = e.changedTouches[0].clientX - startX;
-            if (Math.abs(diff) > 50) { changeSlide(diff > 0 ? -1 : 1); resetAutoPlay(); }
-            startX = 0;
-        });
-        const carouselContainer = document.querySelector('.carousel-container');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => { if (autoPlayTimer) clearInterval(autoPlayTimer); });
-            carouselContainer.addEventListener('mouseleave', startAutoPlay);
-        }
-        startAutoPlay();
-    }
-    function updateCarousel() { if (!track) return; track.style.transform = `translateX(-${carouselIndex * 100}%)`; const dots = document.querySelectorAll('.dot'); dots.forEach((dot, i) => { if(i === carouselIndex) dot.classList.add('active'); else dot.classList.remove('active'); }); }
-    function changeSlide(delta) { carouselIndex = (carouselIndex + delta + totalSlides) % totalSlides; updateCarousel(); }
-    function renderDots() {
-        const dotsContainer = document.getElementById('carouselDots');
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = '';
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === carouselIndex) dot.classList.add('active');
-            dot.addEventListener('click', () => { carouselIndex = i; updateCarousel(); resetAutoPlay(); });
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    function renderCards() {
-        const grid = document.getElementById('cardsContainer');
-        grid.innerHTML = `<div class="cards-grid" id="dynamicCardsGrid"></div>`;
-        const gridContainer = document.getElementById('dynamicCardsGrid');
-        MODULES.forEach(module => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            let desc = module.type === 'link' ? (module.desc || '点击跳转') : '点击查看详情';
-            card.innerHTML = `<div class="card-icon"><i class="${module.icon}"></i></div><h4>${module.title}</h4><p>${desc}</p>`;
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (module.type === 'link') {
-                    if (module.id === 'register') window.open(CONF.registrationUrl, '_blank');
-                    else if (module.id === 'photoLive') window.open(CONF.photoLiveUrl, '_blank');
-                } else {
-                    showModalByKey(module.contentKey);
-                }
-            });
-            gridContainer.appendChild(card);
-        });
-    }
-
-    function showModalByKey(contentKey) {
-        const titleMap = {
-            conferenceIntro: "会议信息", organization: "组织架构", expertsList: "参会专家",
-            briefSchedule: "简要日程", sessions: "详细日程", registrationNotice: "注册须知",
-            callForPapers: "征文投稿", submissionGuidelines: "投稿须知", pastConferences: "往年大会",
-            conferenceSupport: "会议支持"
+        if(!sessionsRes)throw new Error('sessions.json 未找到');
+        SESSIONS=await sessionsRes.json();
+        status.style.display='none';
+    }catch(e){
+        console.error('加载失败',e);
+        status.style.display='block';
+        status.innerText='⚠️ 配置加载失败，显示默认内容。请确认 config.json 和 sessions.json 已上传。';
+        // fallback 数据（与之前内置相同）
+        CONF={
+            year:"2026",
+            fullTitle:"第四届深圳国际安全健康测试技术学术会议",
+            shortTitle:"FXCS2026",
+            dates:"2026年5月15-16日",
+            location:"中国 · 广东 深圳",
+            backgroundImage:"",
+            welcomeMessage:"敬爱的各位专家、同仁：<br>热烈欢迎参加第四届深圳国际安全健康测试技术学术会议暨2026湾区科学仪器与实验室科技产业合作促进活动！本次大会汇聚顶尖智慧，共促测试技术与科学仪器产业创新，期待与您相聚鹏城。",
+            registrationUrl:"#",
+            photoLiveUrl:"#",
+            autoPlayIntervalMs:15000,
+            carouselSlides:[{type:"image",src:"image_video/image.png"},{type:"image",src:"image_video/image1.jpg"},{type:"video",src:"image_video/video1.mp4"},{type:"image",src:"image_video/image2.jpg"}],
+            conferenceIntro:"会议简介",
+            organization:{guidance:"深圳市科协",host:"深圳市分析测试协会",organizers:"秘书处",organizations:"",sponsor:""},
+            expertsList:[],
+            briefSchedule:"日程即将发布",
+            registrationNotice:"注册须知",
+            callForPapers:"演讲报名",
+            submissionGuidelines:"报名须知",
+            conferenceSupport:"鸣谢单位",
+            pastConferences:[]
         };
-        const title = titleMap[contentKey] || "详情";
-        const content = getModalContent(contentKey);
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalContent').innerHTML = content;
-        document.getElementById('globalModal').classList.add('active');
+        SESSIONS=[];
     }
+}
 
-    function renderFooter() {
-        document.getElementById('footerContainer').innerHTML = `
-            <div class="footer">
-                <div>© ${CONF.year} 第四届深圳国际安全健康测试技术学术会议</div>
-                <div>指导：深圳市科协 | 主办：深圳市分析测试协会</div>
-                <div>地址：观澜湖高尔夫度假酒店国际会议中心</div>
-                <div><i class="far fa-envelope"></i> 会务邮箱：？</div>
-            </div>
-        `;
+// ========== 获取模态内容 ==========
+function getModalContent(key){
+    if(key==="sessions"){
+        if(!SESSIONS.length)return "<p>日程数据加载中...</p>";
+        let tabsHtml=`<div class="session-tabs" id="sessionTabs">`;
+        let contentsHtml=`<div id="sessionContents">`;
+        SESSIONS.forEach((s,i)=>{
+            const active=i===0?'active':'';
+            let name=s.name.length>20?s.name.substring(0,18)+'…':s.name;
+            tabsHtml+=`<button class="tab-btn ${active}" data-session="${i}">${name}</button>`;
+            contentsHtml+=`<div class="session-content ${active}" data-session="${i}"><div style="margin-bottom:12px;"><strong>${s.timePlace}</strong></div>${s.tableHtml}</div>`;
+        });
+        tabsHtml+=`</div>`; contentsHtml+=`</div>`;
+        setTimeout(()=>{
+            document.querySelectorAll('#sessionTabs .tab-btn').forEach(tab=>{
+                tab.addEventListener('click',()=>{
+                    const idx=tab.dataset.session;
+                    document.querySelectorAll('#sessionTabs .tab-btn').forEach(t=>t.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.querySelectorAll('#sessionContents .session-content').forEach(c=>c.classList.remove('active'));
+                    document.querySelector(`.session-content[data-session="${idx}"]`).classList.add('active');
+                });
+            });
+        },50);
+        return tabsHtml+contentsHtml;
     }
+    if(key==="pastConferences"){
+        if(!CONF.pastConferences||!CONF.pastConferences.length)return "<p>暂无往年会议信息</p>";
+        let list='<ul style="margin-left:1.2rem;line-height:1.8;">';
+        CONF.pastConferences.forEach(item=>{list+=`<li><strong>${item.year}</strong>：<a href="${item.url}" target="_blank">${item.url}</a></li>`;});
+        list+='</ul>';
+        return list;
+    }
+    if(key==="organization"){
+        const o=CONF.organization;
+        return `<div><strong>指导单位：</strong>${o.guidance}</div><br><div><strong>主办单位：</strong>${o.host}</div><br><div><strong>承办单位：</strong>${o.organizers}</div><br><div><strong>组织单位：</strong>${o.organizations}</div><br><div><strong>主赞助单位：</strong>${o.sponsor}</div>`;
+    }
+    if(key==="expertsList"){
+        if(!CONF.expertsList||!CONF.expertsList.length)return "<p>专家信息更新中</p>";
+        let html='<div style="display:grid;gap:12px;">';
+        CONF.expertsList.forEach(exp=>{html+=`<div style="background:#f1f5f9;padding:10px;border-radius:12px;"><strong>${exp.name}</strong><br>${exp.title}<br><span style="font-size:0.8rem;">${exp.field}</span></div>`;});
+        html+='</div>';
+        return html;
+    }
+    return `<p>${CONF[key]||"信息更新中"}</p>`;
+}
 
-    function setBackground() { if(CONF.backgroundImage) document.querySelector('.page-wrapper').style.backgroundImage = CONF.backgroundImage; }
-    function bindModal() {
-        const modal = document.getElementById('globalModal');
-        document.getElementById('closeModalBtn').addEventListener('click', () => modal.classList.remove('active'));
-        modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
-        document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active'); });
-    }
+// ========== 渲染各部分 ==========
+function renderHero(){
+    document.getElementById('heroContainer').innerHTML=`
+        <div class="hero"><div class="hero-badge">${CONF.shortTitle}</div><h1>${CONF.fullTitle}</h1><div class="subtitle">2026湾区科学仪器与实验室科技产业合作促进活动</div>
+        <div class="info-row"><div class="info-item"><i class="far fa-calendar-alt"></i> ${CONF.dates}</div><div class="info-item"><i class="fas fa-map-marker-alt"></i> ${CONF.location}</div></div>
+        <div class="btn-group"><a class="btn btn-primary" id="heroRegBtn"><i class="fas fa-clipboard-list"></i> 参会报名</a><a class="btn btn-outline" id="heroPaperBtn"><i class="fas fa-file-signature"></i> 演讲报名</a></div></div>`;
+    document.getElementById('heroRegBtn').addEventListener('click',()=>window.open(CONF.registrationUrl,'_blank'));
+    document.getElementById('heroPaperBtn').addEventListener('click',()=>showModalByKey('callForPapers'));
+}
+function renderWelcome(){
+    document.getElementById('welcomeContainer').innerHTML=`<div class="welcome-section"><h3><i class="fas fa-microphone-alt"></i> 欢迎辞</h3><p>${CONF.welcomeMessage}</p><div style="margin-top:12px;font-size:0.9rem;color:#2c5282;">—— 深圳市分析测试协会 杨国武 执行会长</div></div>`;
+}
+let carouselIndex=0, track, slides, totalSlides, autoPlayTimer;
+function startAutoPlay(){if(autoPlayTimer)clearInterval(autoPlayTimer);if(totalSlides<=1)return;autoPlayTimer=setInterval(()=>changeSlide(1),CONF.autoPlayIntervalMs||15000);}
+function resetAutoPlay(){if(autoPlayTimer){clearInterval(autoPlayTimer);startAutoPlay();}}
+function buildCarousel(){
+    const container=document.getElementById('carouselSection');
+    const data=CONF.carouselSlides||[];
+    if(!data.length){container.innerHTML='<div class="carousel-wrapper"><div class="carousel-title">往届精彩瞬间</div><div style="padding:2rem;">即将更新</div></div>';return;}
+    let slidesHtml='';
+    data.forEach((item,idx)=>{if(item.type==='video')slidesHtml+=`<div class="carousel-slide"><video controls preload="metadata" src="${item.src}"></video></div>`;else slidesHtml+=`<div class="carousel-slide"><img src="${item.src}" alt="slide ${idx}" loading="lazy"></div>`;});
+    const html=`<div class="carousel-wrapper"><div class="carousel-title"><i class="fas fa-images"></i> 往届精彩影像集锦（自动播放）</div><div class="carousel-container"><div class="carousel-track" id="carouselTrack">${slidesHtml}</div><button class="carousel-btn left" id="carouselPrev"><i class="fas fa-chevron-left"></i></button><button class="carousel-btn right" id="carouselNext"><i class="fas fa-chevron-right"></i></button></div><div class="dots" id="carouselDots"></div></div>`;
+    container.innerHTML=html;
+    track=document.getElementById('carouselTrack');
+    slides=document.querySelectorAll('.carousel-slide');
+    totalSlides=slides.length;
+    updateCarousel();
+    document.getElementById('carouselPrev').addEventListener('click',()=>{changeSlide(-1);resetAutoPlay();});
+    document.getElementById('carouselNext').addEventListener('click',()=>{changeSlide(1);resetAutoPlay();});
+    renderDots();
+    let startX=0;
+    track.addEventListener('touchstart',e=>startX=e.touches[0].clientX);
+    track.addEventListener('touchend',e=>{if(!startX)return;const diff=e.changedTouches[0].clientX-startX;if(Math.abs(diff)>50){changeSlide(diff>0?-1:1);resetAutoPlay();}startX=0;});
+    const c=document.querySelector('.carousel-container');
+    if(c){c.addEventListener('mouseenter',()=>{if(autoPlayTimer)clearInterval(autoPlayTimer);});c.addEventListener('mouseleave',startAutoPlay);}
+    startAutoPlay();
+}
+function updateCarousel(){if(!track)return;track.style.transform=`translateX(-${carouselIndex*100}%)`;document.querySelectorAll('.dot').forEach((d,i)=>{if(i===carouselIndex)d.classList.add('active');else d.classList.remove('active');});}
+function changeSlide(delta){carouselIndex=(carouselIndex+delta+totalSlides)%totalSlides;updateCarousel();}
+function renderDots(){const c=document.getElementById('carouselDots');if(!c)return;c.innerHTML='';for(let i=0;i<totalSlides;i++){const dot=document.createElement('div');dot.className='dot';if(i===carouselIndex)dot.classList.add('active');dot.addEventListener('click',()=>{carouselIndex=i;updateCarousel();resetAutoPlay();});c.appendChild(dot);}}
 
-    async function init() {
-        await loadConfig();
-        setBackground();
-        renderHero();
-        renderWelcome();
-        renderCards();
-        buildCarousel();
-        renderFooter();
-        bindModal();
-    }
-    init();
+const MODULES=[
+    {id:"confInfo",title:"会议信息",icon:"fas fa-info-circle",type:"modal",contentKey:"conferenceIntro"},
+    {id:"org",title:"组织架构",icon:"fas fa-building",type:"modal",contentKey:"organization"},
+    {id:"experts",title:"参会专家",icon:"fas fa-users",type:"modal",contentKey:"expertsList"},
+    {id:"briefSchedule",title:"简要日程",icon:"fas fa-calendar-week",type:"modal",contentKey:"briefSchedule"},
+    {id:"detailSchedule",title:"详细日程",icon:"fas fa-table-list",type:"modal",contentKey:"sessions"},
+    {id:"register",title:"参会报名",icon:"fas fa-user-plus",type:"link",urlKey:"registrationUrl",desc:"填写问卷星报名"},
+    {id:"regNotice",title:"注册须知",icon:"fas fa-clipboard-list",type:"modal",contentKey:"registrationNotice"},
+    {id:"callPaper",title:"报名演讲",icon:"fas fa-file-alt",type:"modal",contentKey:"callForPapers"},
+    {id:"subGuide",title:"报名须知",icon:"fas fa-pen-ruler",type:"modal",contentKey:"submissionGuidelines"},
+    {id:"photoLive",title:"照片直播",icon:"fas fa-camera",type:"link",urlKey:"photoLiveUrl",desc:"查看精彩瞬间"},
+    {id:"support",title:"会议支持",icon:"fas fa-handshake",type:"modal",contentKey:"conferenceSupport"},
+    {id:"pastConferences",title:"精彩瞬间",icon:"fas fa-calendar-alt",type:"modal",contentKey:"pastConferences"}
+];
+function renderCards(){
+    const grid=document.getElementById('cardsContainer');
+    grid.innerHTML=`<div class="cards-grid" id="dynamicCardsGrid"></div>`;
+    const container=document.getElementById('dynamicCardsGrid');
+    MODULES.forEach(m=>{
+        const card=document.createElement('div');card.className='card';
+        let desc=m.type==='link'?(m.desc||'点击跳转'):'点击查看详情';
+        card.innerHTML=`<div class="card-icon"><i class="${m.icon}"></i></div><h4>${m.title}</h4><p>${desc}</p>`;
+        card.addEventListener('click',()=>{
+            if(m.type==='link'){
+                if(m.id==='register')window.open(CONF.registrationUrl,'_blank');
+                else if(m.id==='photoLive')window.open(CONF.photoLiveUrl,'_blank');
+            }else showModalByKey(m.contentKey);
+        });
+        container.appendChild(card);
+    });
+}
+function showModalByKey(key){
+    const map={conferenceIntro:"会议信息",organization:"组织架构",expertsList:"参会专家",briefSchedule:"简要日程",sessions:"详细日程",registrationNotice:"注册须知",callForPapers:"征文投稿",submissionGuidelines:"投稿须知",pastConferences:"往年大会",conferenceSupport:"会议支持"};
+    document.getElementById('modalTitle').innerText=map[key]||'详情';
+    document.getElementById('modalContent').innerHTML=getModalContent(key);
+    document.getElementById('globalModal').classList.add('active');
+}
+function renderFooter(){
+    document.getElementById('footerContainer').innerHTML=`<div class="footer"><div>© ${CONF.year} 第四届深圳国际安全健康测试技术学术会议</div><div>指导：深圳市科协 | 主办：深圳市分析测试协会</div><div>地址：观澜湖高尔夫度假酒店国际会议中心</div><div><i class="far fa-envelope"></i> 会务邮箱：？</div></div>`;
+}
+function setBackground(){if(CONF.backgroundImage)document.querySelector('.page-wrapper').style.backgroundImage=CONF.backgroundImage;}
+function bindModal(){
+    const modal=document.getElementById('globalModal');
+    document.getElementById('closeModalBtn').addEventListener('click',()=>modal.classList.remove('active'));
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('active');});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('active'))modal.classList.remove('active');});
+}
+async function init(){await loadConfig();setBackground();renderHero();renderWelcome();renderCards();buildCarousel();renderFooter();bindModal();}
+init();
 </script>
 </body>
 </html>
