@@ -7,15 +7,14 @@
     "backgroundImage": "",
     "welcomeMessage": "敬爱的各位专家、同仁：<br>热烈欢迎参加第四届深圳国际安全健康测试技术学术会议暨2026湾区科学仪器与实验室科技产业合作促进活动！本次大会汇聚顶尖智慧，共促测试技术与科学仪器产业创新，期待与您相聚鹏城。",
     "registrationUrl": "https://www.wjx.top/vm/h4I7gXx.aspx",
+    "speakerRegistrationUrl": "https://www.wjx.top/vm/speaker-example.aspx",
     "photoLiveUrl": "https://m.alltuu.com/album/b10159df0e35a72f198ed45fcc656671/?menu=live",
-    "autoPlayIntervalMs": 15000,
-    "carouselSlides": [
-        { "type": "image", "src": "image_video/image.png" },
-        { "type": "image", "src": "image_video/image1.jpg" },
-        { "type": "video", "src": "image_video/video1.mp4" },
-        { "type": "image", "src": "image_video/image2.jpg" }
-    ],
+    "venueInfo": "会议地址（暂定）：深圳观澜湖高尔夫度假酒店国际会议中心",
+    "joinAssociation": "加入深圳市分析测试协会：入会条件与申请流程更新中，敬请期待。如需咨询请联系协会秘书处。",
     "conferenceIntro": "深圳国际安全健康测试技术学术会议是深圳市分析测试协会主办的年度盛会。本届设置12个专题，涵盖类器官与细胞治疗、精准医学、绿色实验室、大数据模型等热点，50余位专家报告。",
+    "briefSchedule": "<strong>5月15日白天</strong> 开幕式+科技大讲堂+学术专场一至六+“产学研用”成果转化圆桌会议<br><strong>5月15日晚</strong> 校友会交流<br><strong>5月16日</strong> 学术专场七至十二+“产学研用”成果转化圆桌会议+年度大会+答谢晚宴",
+    "registrationNotice": "专家报名截止5月10日。协会备案专家1080元，非备案专家1980元。交通住宿自理。点击报名按钮填写问卷。",
+    "conferenceSupport": "特别鸣谢：深圳市计量质量检测研究院（集团）有限责任公司实验技术服务分公司、中粤广州实验室技术有限公司、湖南沃恩环境工程有限公司、上海安谱实验科技股份有限公司、青岛盛瀚色谱技术有限公司、深圳市吉茂科学仪器有限公司、赛默飞世尔科技（中国）有限公司、深圳市嘉鸿顺实业有限公司、浙江优纳特科学仪器有限公司、广州仪器行业协会等百余家单位。",
     "organization": {
         "guidance": "深圳市科协",
         "host": "深圳市分析测试协会",
@@ -24,21 +23,173 @@
         "sponsor": "深圳市嘉鸿顺实业有限公司、赛默飞世尔科技（中国）有限公司、上海安谱实验科技股份有限公司、深圳市计量质量检测研究院（集团）有限责任公司实验技术服务分公司、浙江优纳特科学仪器有限公司、中粤广州实验室技术有限公司、深圳市吉茂科学仪器有限公司"
     },
     "expertsList": [
-        { "name": "徐弢 教授", "title": "深圳清华大学研究院生物智能制造和活体打印研发中心主任", "field": "生物3D打印类器官技术在精准及再生医学中的创新实践" },
-        { "name": "周宏伟 教授", "title": "南方医科大学深圳医院院长", "field": "医学检验创新转化实践与思考" },
-        { "name": "梁成珠 研究员", "title": "AOAC中国区主席", "field": "食品安全国家标准和国际标准协调性研究" },
-        { "name": "苏志明 博士", "title": "中国检验有限公司质量体系副总监", "field": "粤港澳大湾区实验室国际化与可持续发展" },
-        { "name": "王建勋 教授", "title": "细胞谷集团首席科学家", "field": "细胞治疗产业发展趋势" },
-        { "name": "吴刚 总经理", "title": "上海安谱实验科技股份有限公司", "field": "国产替代创新实践" }
+        {
+            "name": "徐弢 教授",
+            "title": "深圳清华大学研究院生物智能制造和活体打印研发中心主任",
+            "field": "生物3D打印类器官技术在精准及再生医学中的创新实践",
+            "photo": "experts/xutao.jpg"
+        },
+        {
+            "name": "周宏伟 教授",
+            "title": "南方医科大学深圳医院院长",
+            "field": "医学检验创新转化实践与思考",
+            "photo": "experts/zhouhongwei.jpg"
+        },
+        {
+            "name": "梁成珠 研究员",
+            "title": "AOAC中国区主席",
+            "field": "食品安全国家标准和国际标准协调性研究",
+            "photo": "experts/liangchengzhu.jpg"
+        },
+        {
+            "name": "苏志明 博士",
+            "title": "中国检验有限公司质量体系副总监",
+            "field": "粤港澳大湾区实验室国际化与可持续发展",
+            "photo": "experts/suzhiming.jpg"
+        },
+        {
+            "name": "王建勋 教授",
+            "title": "细胞谷集团首席科学家",
+            "field": "细胞治疗产业发展趋势",
+            "photo": "experts/wangjianxun.jpg"
+        },
+        {
+            "name": "吴刚 总经理",
+            "title": "上海安谱实验科技股份有限公司",
+            "field": "国产替代创新实践",
+            "photo": "experts/wugang.jpg"
+        }
     ],
-    "briefSchedule": "<strong>5月15日白天</strong> 开幕式+科技大讲堂+学术专场一至六+“产学研用”成果转化圆桌会议<br><strong>5月15日晚</strong> 校友会交流<br><strong>5月16日</strong> 学术专场七至十二+“产学研用”成果转化圆桌会议+年度大会+圆桌会议<br><strong> 答谢晚宴",
-    "registrationNotice": "专家报名截止5月10日。协会备案专家1080元，非备案专家1980元。交通住宿自理。点击上方报名按钮填写问卷。",
-    "callForPapers": "演讲须知：报名时间截止4月1日，投递报告主题邮箱：szata@163.com",
-    "submissionGuidelines": "1.摘要500字内。2.模板可联系会务组。3.审稿周期7-10天。",
-    "conferenceSupport": "特别鸣谢：深圳市计量质量检测研究院（集团）有限责任公司实验技术服务分公司、中粤广州实验室技术有限公司、湖南沃恩环境工程有限公司、上海安谱实验科技股份有限公司、青岛盛瀚色谱技术有限公司、深圳市吉茂科学仪器有限公司、赛默飞世尔科技（中国）有限公司、深圳市嘉鸿顺实业有限公司、浙江优纳特科学仪器有限公司、广州仪器行业协会等百余家单位。",
-    "pastConferences": [
-        { "year": "2025年（第三届）", "url": "https://example.com/2025" },
-        { "year": "2024年（第二届）", "url": "https://example.com/2024" },
-        { "year": "2023年（第一届）", "url": "https://example.com/2023" }
-    ]
+    "sessionImages": [
+        {
+            "name": "专场一：食品新国标、新国抽及“两新”政策",
+            "timePlace": "5月15日 09:00-12:00 | 和阳厅",
+            "image": "agenda/session1.jpg"
+        },
+        {
+            "name": "专场二：精准医学检测与临床诊疗应用",
+            "timePlace": "5月15日 14:00-18:00 | 嘉阳厅",
+            "image": "agenda/session2.png"
+        },
+        {
+            "name": "专场三：绿色实验室建设与智慧化",
+            "timePlace": "5月15日 13:30-17:30 | 某厅",
+            "image": "agenda/session3.jpg"
+        },
+        {
+            "name": "专场四：类器官与细胞治疗创新应用",
+            "timePlace": "5月15日 13:30-17:30 | 某厅",
+            "image": "agenda/session4.jpg"
+        },
+        {
+            "name": "专场五：实验室大数据模型及生信分析",
+            "timePlace": "5月15日 13:30-17:30 | 某厅",
+            "image": "agenda/session5.jpg"
+        },
+        {
+            "name": "专场六：现代环境监测与生态环境治理前沿",
+            "timePlace": "5月15日 13:30-17:30 | 某厅",
+            "image": "agenda/session6.jpg"
+        },
+        {
+            "name": "专场七：食品农产品检测新技术及未知物健康效应表征",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session7.jpg"
+        },
+        {
+            "name": "专场八：实验病理学与模式动物创新应用",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session8.jpg"
+        },
+        {
+            "name": "专场九：合成生物技术与生物制造产业发展",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session9.jpg"
+        },
+        {
+            "name": "专场十：医学与食品即时检验（POCT）前沿技术",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session10.jpg"
+        },
+        {
+            "name": "专场十一：新材料研究及珠宝首饰产业发展",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session11.jpg"
+        },
+        {
+            "name": "专场十二：化合物分离及结构鉴定前沿技术",
+            "timePlace": "5月16日 08:30-11:30 | 某厅",
+            "image": "agenda/session12.jpg"
+        },
+        {
+            "name": "2026年深圳市分析测试协会年度大会",
+            "timePlace": "5月16日 13:30-16:00 | 和阳厅",
+            "image": "agenda/session13.jpg"
+        }
+    ],
+    "modules": [
+        {
+            "id": "confInfo",
+            "visible": true
+        },
+        {
+            "id": "register",
+            "visible": true
+        },
+        {
+            "id": "agenda",
+            "visible": true
+        },
+        {
+            "id": "experts",
+            "visible": true
+        },
+        {
+            "id": "overview",
+            "visible": true
+        },
+        {
+            "id": "expertApply",
+            "visible": true
+        },
+        {
+            "id": "photoLive",
+            "visible": false
+        },
+        {
+            "id": "spare1",
+            "visible": false
+        },
+        {
+            "id": "spare2",
+            "visible": false
+        }
+    ],
+    "carouselSlides": [
+        {
+            "type": "image",
+            "src": "image_video/image.png"
+        },
+        {
+            "type": "image",
+            "src": "image_video/image1.jpg"
+        },
+        {
+            "type": "video",
+            "src": "image_video/video1.mp4"
+        },
+        {
+            "type": "image",
+            "src": "image_video/image2.jpg"
+        }
+    ],
+    "siteVersion": "v2.3",
+    "venueMapImage": "venue-map.jpg",
+    "venueMapUrl": "https://uri.amap.com/search?keyword=%E8%A7%82%E6%BE%9C%E6%B9%96%E9%AB%98%E5%B0%94%E5%A4%AB%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97&city=%E6%B7%B1%E5%9C%B3",
+    "overviewImage": "overview.jpg",
+    "overviewNote": "会议总览明细如下，可点击图片放大查看。",
+    "registrationNoticeImage": "reg-notice.jpg",
+    "expertApply": "申请成为协会在册专家：条件与流程更新中，敬请期待。具体可联系协会秘书处。",
+    "expertApplyUrl": "https://www.wjx.top/vm/expert-apply-example.aspx",
+    "expertApplyImage": ""
 }
