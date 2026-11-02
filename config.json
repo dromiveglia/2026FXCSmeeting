@@ -9,7 +9,7 @@
     "registrationUrl": "https://www.wjx.top/vm/h4I7gXx.aspx",
     "speakerRegistrationUrl": "https://www.wjx.top/vm/speaker-example.aspx",
     "photoLiveUrl": "https://m.alltuu.com/album/b10159df0e35a72f198ed45fcc656671/?menu=live",
-    "venueInfo": "会议地址（暂定）：深圳观澜湖高尔夫度假酒店国际会议中心",
+    "venueInfo": "会议地址：深圳观澜湖酒店（国际会议中心）",
     "joinAssociation": "加入深圳市分析测试协会：入会条件与申请流程更新中，敬请期待。如需咨询请联系协会秘书处。",
     "conferenceIntro": "深圳国际安全健康测试技术学术会议是深圳市分析测试协会主办的年度盛会。本届设置12个专题，涵盖类器官与细胞治疗、精准医学、绿色实验室、大数据模型等热点，50余位专家报告。",
     "briefSchedule": "<strong>5月15日白天</strong> 开幕式+科技大讲堂+学术专场一至六+“产学研用”成果转化圆桌会议<br><strong>5月15日晚</strong> 校友会交流<br><strong>5月16日</strong> 学术专场七至十二+“产学研用”成果转化圆桌会议+年度大会+答谢晚宴",
@@ -69,7 +69,7 @@
         {
             "name": "专场二：精准医学检测与临床诊疗应用",
             "timePlace": "5月15日 14:00-18:00 | 嘉阳厅",
-            "image": "agenda/session2.png"
+            "image": "agenda/session2.jpg"
         },
         {
             "name": "专场三：绿色实验室建设与智慧化",
@@ -183,9 +183,9 @@
             "src": "image_video/image2.jpg"
         }
     ],
-    "siteVersion": "v2.3",
+    "siteVersion": "v2.4",
     "venueMapImage": "venue-map.jpg",
-    "venueMapUrl": "https://uri.amap.com/search?keyword=%E8%A7%82%E6%BE%9C%E6%B9%96%E9%AB%98%E5%B0%94%E5%A4%AB%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97&city=%E6%B7%B1%E5%9C%B3",
+    "venueMapUrl": "https://uri.amap.com/marker?position=114.009272,22.780868&name=%E6%B7%B1%E5%9C%B3%E8%A7%82%E6%BE%9C%E6%B9%96%E9%85%92%E5%BA%97&src=fxcs2026&coordinate=gaode&callnative=1",
     "overviewImage": "overview.jpg",
     "overviewNote": "会议总览明细如下，可点击图片放大查看。",
     "registrationNoticeImage": "reg-notice.jpg",
